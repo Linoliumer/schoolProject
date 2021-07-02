@@ -1,0 +1,166 @@
+.header{
+	background: repeating-radial-gradient(circle,#595959,#595959 10px,#F2F2F2 10px, #F2F2F2 20px);
+}
+.logo img{
+	object-fit: cover;
+  	width: auto;
+  	height: 100px;
+}
+.error_btn {
+	margin-top: 5px;
+}
+.logo {
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.buttons {
+	border: 2px groove #000000;
+	padding-bottom: 7px;
+	padding-top: 7px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 15px;
+	font-weight: 700;
+	-webkit-text-stroke-width: 0.2px;
+	-webkit-text-stroke-color: #7A8CFF;
+	background-color: white;
+}
+.cor_main{
+	margin-top: 15px;
+
+}
+.cor_main img{
+
+	height:400px;
+	object-fit: cover;
+
+}
+.school{
+	padding-top: 5px;
+}
+
+.main_headline{
+	-webkit-text-stroke: 1px #CECECE;
+	background-color: white;
+	color: white;
+	border: 1px double black;
+	border-radius: 60px 0px 60px;
+	text-shadow: 0px 0px 10px green;
+	margin-bottom: auto;
+	margin-top: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+.spec {
+	border-top: 1px groove black;
+	border-bottom: 1px groove black;
+
+}
+.navigation button {
+	border: 1px groove #000000;
+	padding-bottom: 7px;
+	padding-top: 7px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 15px;
+	font-weight: 700;
+	-webkit-text-stroke-width: 0.2px;
+	-webkit-text-stroke-color: #7A8CFF;
+}
+.carousel-item {
+	max-height: 400px;
+	height: 100%;
+ 	width : 100%;
+ 	overflow: hidden;
+}
+.portfolio {
+	padding-top: -5px;
+	margin-bottom: 50px;
+}
+.portfolio-item img {
+	margin: auto;
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+ }
+ .instruction {
+ 	margin-top: 10px;
+ }
+ .instruction_elements{
+ 	margin-bottom: 5px;
+ }
+
+ .heading_instr{
+ 	margin-bottom: 10px ;
+ }
+.feedback_box {
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: white;
+	border-top: 1px groove black;
+	border-bottom: 1px groove black;
+	border-radius: 20px;
+
+}
+.reviews button{
+	background-color: white;
+}
+.author_review {
+	font-size: 20px;
+	font-weight: 500;
+}
+.rating_review {
+	font-size: 18px;
+	font-weight: 600;
+}
+.main_text_review {
+	font-size: 15px;
+}
+.date_review {
+	font-size: 14px;
+}
+.heading_portf {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	margin-top: 10px;
+}
+.welcome_theme {
+	padding:0px;
+	margin: 0px;
+}
+.instruction_theme{
+	padding-left: 5px; 
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: white;
+	border-top: 1px groove black;
+	border-bottom: 1px groove black;
+	border-radius: 20px;
+}
+.no_reviews {
+	border-top: 1px groove black;
+	border-bottom: 1px groove black;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.about_logo img {
+	margin-left: 5px;
+	margin-bottom: 4px;
+}
+.creators_card img {
+	width: auto;
+}
+.creators img{
+	margin-top: 10px;
+}

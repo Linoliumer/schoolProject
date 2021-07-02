@@ -1,0 +1,48 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+    <hr>
+    <div class='welcome_theme'>
+      <h3 class="text-center">QUESTION</h3>
+    </div>
+    <hr>
+    <section class="question_block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 about_logo">
+          <img src="{% static 'rules.svg' %}" alt="" width="50" class="rounded mx-auto d-block">
+            <h3 class="text-center">Правила</h3>
+            <p class="text-center">Перед отправкой нам вопроса:<br>• Чётко сформулируйте тему вопроса.<br>• Чётко сформулируйте текст вопроса.<br>• Почта, оставленная вами, служит для того, что бы мы могли с вами связаться.<br>• Имя/Ник будет использоваться в обращении к вам при составлении ответа.<br>• Наш официальный почтовый адресс(С которого будут приходить ответы):<br><h5 class='text-center'>projectquessch@gmail.com</h5></p>
+          </div>
+          <div class="col-12 col-md-6">
+            <form class="feedback_box" method='POST' action="{% url 'create_quest' %}">
+            {% csrf_token %}
+              <div class="col-12">
+                <h3 class="text-center">Задать нам вопрос</h3>
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleFormControlInput1">Email</label>
+                <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleFormControlInput1">Имя / Ник</label>
+                <input  class="form-control" name="name_person"  placeholder="">
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleFormControlInput1">Тема</label>
+                <input  class="form-control" name="theme_question" placeholder="">
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleFormControlTextarea1">Текст</label>
+                <textarea class="form-control" name="full_text" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class=" buttons btn btn-outline-dark">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+{% endblock  %}

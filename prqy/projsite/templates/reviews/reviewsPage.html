@@ -1,0 +1,94 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+    <hr>
+    <div class='welcome_theme'>
+      <h3 class="text-center">REVIEWS</h3>
+    </div>
+    <hr>
+    <section class="reviews">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 about_logo">
+            <img src="{% static 'rules.svg' %}" alt="" width="50" class="rounded mx-auto d-block">
+            <h3 class="text-center">Правила</h3>
+            <p class="text-center">• запрещено обсуждение политики, классовых, религиозных и национальных вопросов<br> • запрещено обсуждение личной жизни публичных людей<br>• запрещено использование в сообщениях нецензурных слов, брани, выражений, оскорбительных для других посетителей<br>• запрещена публикация сообщений, содержащих ссылки на "пиратский" контент (фильмы, музыка и т.п.)<br>• запрещено отправлять сообщения под разными именами с одного компьютера<br>• запрещено повторять удаленные сообщения</p>
+          </div>
+          <div class="col-12 col-md-6 ">
+            <form class="feedback_box" method='POST' action="{% url 'create_view' %}" class='was-validated'>
+              {% csrf_token %}
+              <h3 class="text-center">Оставить отзыв</h3>
+              <div class="form-group col-12">
+                <label for="exampleFormControlInput1">Ваше имя</label>
+                <input class="form-control" id="name_review" name='name' size='30' maxlength='30' id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="form-group col-12">
+                <p class=''>Оценка</p>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="1">
+                  <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="2">
+                  <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="3">
+                  <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="4">
+                  <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="5">
+                  <label class="form-check-label" for="inlineRadio5">5</label>
+                </div>
+
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleFormControlInput1">Текст</label>
+                <textarea id="text_review" class="form-control text-center" size='500' maxlength='500' id="exampleFormControlTextarea1" rows="3" placeholder="" name="text"></textarea>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class=" buttons btn btn-outline-dark">Отправить</button>
+              </div>
+              {% if review_form.errors %}
+                <div class="alert alert-danger" role="alert">
+                  {{ review_form.errors }}
+                </div>
+              {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section class="reviews_all">
+      <div class='container'>
+        {% if reviews_list %}
+        <div class="row row-cols-1 row-cols-md-2">
+        {% for element in reviews_list %}
+          <div class="col mb-4">
+            <div class="card">
+              <img src="{% static 'person_3.svg' %}" class="card-img-top" height="100" alt="">
+              <div class="card-body">
+                <h4 class="card-title text-center">{{element.author_name}}</h4>
+                <h4 class="card-text text-center">Оценка: {{element.rating}}</h4>
+                <h5 class="card-text text-center">{{element.text_quest}}</h5>
+                <p class="card-text text-center">Дата: {{element.date_time_create}}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+        {% else %}
+        <div class='col-12 no_reviews'>
+          <h4 class='text-center'>Отзывов ещё нет, но вы можете стать первым</h4>
+        </div>
+        {% endif %}
+      </div>
+    </section> 
+    <hr>
+
+{% endblock  %}

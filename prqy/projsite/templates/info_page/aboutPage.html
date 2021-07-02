@@ -1,0 +1,92 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+    <hr>
+    <div class='welcome_theme'>
+      <h3 class="text-center">INFO</h3>
+    </div>
+    <hr>
+    <section class="headline_about_us">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 about_logo">
+          <img  src="{% static 'about.svg' %}" alt="" width="50" class="rounded mx-auto d-block">
+            <h3 class="text-center">О нас</h3>
+          </div>
+          <div class="general_info col-12">
+            <p class="text-center">Вашему вниманию наша команда предлагает один из самых необходимых проектов этого года. Нами было создано сайт-поддержка для всех школьников и студентов . Наши услуги совершенно бесплатные. Любой желающий задать вопрос, получить свой ответ в течение 15 минут.Наши специалисты день за днём совершенствуют наш проект и пытаются помочь каждому, кто в этом нуждается. Наша задача состоит в том ,чтобы облегчить бремя простых "смертных " школьников и студентов. Мы все прекрасно понимаем ,одно из самых сложных и в тоже время прекрасных периодов в жизни любого из нас -это период обучения. И для того,чтобы он был более красочным и менее трудным ,наш создатель проекта Вас просит не стесняться и задавать любые вопросы ,чтобы прогрессировать вам ,а также нашему сайту .
+Благодарим Вас за обращение.
+Для нас важен каждый из Вас и каждое Ваше мнение .</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section class="creators">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <h3 class="text-center">Создатели проекта</h3>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-3">
+          <div class='creator_card'>
+            <img src="{% static 'creater_4.jpg' %}"  width="150" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Илья Васильев</h5>
+              <p class="card-text">Технический исполнитель</p>
+              <a target="_blank" href="https://vk.com/oplo_tydtop"><img class="menu__item" target="_blank" width="35" src="{% static 'vk.svg' %}"></a>
+              <a target="_blank" href="https://www.instagram.com/linoliumer/?hl=ru"><img class=" menu__item" target="_blank" width="30" src="{% static 'instagram.svg' %}"></a>
+            </div>
+          </div> 
+          <div class="card col-12 col-md-6 col-lg-3">
+          <div class='creator_card'>
+            <img src="{% static 'creater_2.jpg' %}" width="150" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Артём Капустян</h5>
+              <p class="card-text">Руководитель группы</p>
+              <a target="_blank" href="https://vk.com/id289019247"><img class=" menu__item" target="_blank" width="35" src="{% static 'vk.svg' %}"></a>
+              <a target="_blank" href="https://www.instagram.com/tema_style_23/?hl=ru"><img class=" menu__item" target="_blank" width="30" src="{% static 'instagram.svg' %}"></a>
+            </div>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-3">
+          <div class='creator_card'>
+            <img src="{% static 'creater_1.jpg' %}"  width="150" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Изольда Когай</h5>
+              <p class="card-text">Идейный вдохновитель</p>
+              <a target="_blank" href="https://vk.com/dye_flow"><img class=" menu__item" target="_blank" width="35" src="{% static 'vk.svg' %}"></a>
+              <a target="_blank" href="https://www.instagram.com/dye_flow/?hl=ru"><img class=" menu__item" target="_blank" width="30" src="{% static 'instagram.svg' %}"></a>
+            </div>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-3">
+          <div class='creator_card'>
+            <img src="{% static 'creater_3.jpg' %}"  width="150" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Фарзина Хушвактова</h5>
+              <p class="card-text">Модератор</p>
+              <a target="_blank" href="https://vk.com/id567369593"><img class=" menu__item" target="_blank" width="35" src="{% static 'vk.svg' %}"></a>
+            </div>
+          </div>
+        </div>    
+      </div>
+      </section>
+      <hr>
+      <section class="idea">
+        <div class="container">
+          <div class="row">
+            <div class=" col-12">
+              <img src="{% static 'idea.svg' %}" alt="" width="50" class="rounded mx-auto d-block">
+              <h3 class="text-center">Идея проекта</h3>
+            </div>
+            <div class="d-flex justify-content-center col-12">
+              <p class="text-center">Большинство педагогов и родителей используют консервативные методы воспитания и обучения, а новые образцы обучения формируются, но очень медленно. Система образования постепенно совершенствуется, но в процессе образования ученик может оказаться в сложной ситуации, а попросить помощи у наставников не будет возможности. Разрешить проблему поможет наш сайт, где можно задать любой вопрос, касающийся образовательного процесса.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+{% endblock  %}
