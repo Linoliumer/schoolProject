@@ -23,3 +23,5 @@ Python library: ( schoolProject/prqy/requirements.txt )
 
 
 site - prqy.herokuapp.com
+
+2019 г.
