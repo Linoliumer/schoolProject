@@ -19,4 +19,7 @@ Russian:
     HTML,
     CSS.
 
+Python library: ( schoolProject/prqy/requirements.txt ) 
+
+
 site - prqy.herokuapp.com
